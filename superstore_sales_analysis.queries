@@ -1,0 +1,66 @@
+-- SUPERSTORE SALES ANALYSIS PROJECT
+-- Tool Used: MySQL
+
+-- 1. Create Database
+CREATE DATABASE superstore_db;
+
+-- 2. Use Database
+USE superstore_db;
+
+-- 3. Create Orders Table
+CREATE TABLE orders (
+    order_id VARCHAR(50),
+    order_date DATE,
+    ship_mode VARCHAR(50),
+    customer_name VARCHAR(100),
+    segment VARCHAR(50),
+    country VARCHAR(50),
+    city VARCHAR(50),
+    state VARCHAR(50),
+    region VARCHAR(50),
+    category VARCHAR(50),
+    sub_category VARCHAR(50),
+    sales DECIMAL(10,2),
+    quantity INT,
+    discount DECIMAL(4,2),
+    profit DECIMAL(10,2)
+);
+
+-- 4. Check number of rows
+SELECT COUNT(*) 
+FROM superstore_clean;
+
+-- 5. View dataset
+SELECT *
+FROM superstore_clean
+LIMIT 10;
+
+-- 6. Total Sales & Profit
+SELECT 
+    SUM(sales) AS total_sales,
+    SUM(profit) AS total_profit
+FROM superstore_clean;
+
+-- 7. Sales by Region
+SELECT 
+    region,
+    SUM(sales) AS total_sales
+FROM superstore_clean
+GROUP BY region
+ORDER BY total_sales DESC;
+
+-- 8. Top 5 Products by Sales
+SELECT 
+    product_name,
+    SUM(sales) AS total_sales
+FROM superstore_clean
+GROUP BY product_name
+ORDER BY total_sales DESC
+LIMIT 5;
+
+-- 9. Profit by Category
+SELECT 
+    category,
+    SUM(profit) AS total_profit
+FROM superstore_clean
+GROUP BY category;
