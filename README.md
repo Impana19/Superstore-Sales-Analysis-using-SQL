@@ -1,23 +1,21 @@
 # Superstore-Sales-Analysis-using-SQL
 Analyzed retail sales data using SQL to identify regional sales performance, top products, and profitability trends. Implemented aggregation queries, grouping, and sorting to derive business insights from the dataset.
 
-
 ## Project Overview
 This project analyzes retail sales data from the Superstore dataset using SQL.
 
 ## Tools Used
-- SQL
 - MySQL
+- SQL
 
-## Key Analysis
-- Total sales and profit
-- Regional sales performance
-- Category profit analysis
-- Top selling products
-- Discount trends
+## Analysis Performed
+• Total sales and profit calculation  
+• Regional sales analysis  
+• Top selling products identification  
+• Profit analysis by product category  
 
 ## Dataset
-Superstore sales dataset containing product, sales, profit, and regional information.
+Superstore retail dataset containing sales, profit, region, and product information.
 
-## Outcome
-Generated insights into product performance, regional trends, and profitability using SQL queries.
+## Key Insights
+SQL queries were used to generate business insights from the dataset, helping understand sales performance and profitability trends.
